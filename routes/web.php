@@ -77,7 +77,7 @@ Route::group(['middleware' => 'auth'], function () {
 
    
 
-     Route::namespace('Backend\Daire')->name('kullanici.')->middleware('can:kullanici')->group(function(){
+     Route::namespace('Backend\Kullanici')->name('kullanici.')->middleware('can:kullanici')->group(function(){
 
         // Profil Ayarları Menüsü
         Route::group(['prefix' => 'kullanici/profil'], function () {

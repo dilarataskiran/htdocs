@@ -34,7 +34,7 @@
                 <div class="form-group text-center">
                   <img src="{{ asset('urun_resimleri/'.$urun->gorsel_path) }}" style="width: 100px !important; height: 100px !important;" style="align-content: center" class="rounded-circle img-thumbnail img-responsive" alt="">
                 </div>
-                <p><b>{{ $urun->fiyat }} TL dilara</b></p>  
+                <p><b>{{ $urun->fiyat }} TL</b></p>  
                 
                 <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
                   @csrf

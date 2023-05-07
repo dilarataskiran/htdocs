@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Daire;
+namespace App\Http\Controllers\Backend\Kullanici;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -16,7 +16,7 @@ class ProfilController extends Controller
         $session_array = session('_token');
         $cartItems = \Cart::session($session_array)->getContent();
 
-        return view('Backend.Daire.profil',compact('cartItems'));
+        return view('Backend.Kullanici.profil',compact('cartItems'));
     }
 
 

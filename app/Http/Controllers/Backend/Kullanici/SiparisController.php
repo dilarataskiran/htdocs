@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Daire;
+namespace App\Http\Controllers\Backend\Kullanici;
 
 use App\Http\Controllers\Controller;
 use App\Models\SepetModel;
@@ -17,7 +17,7 @@ class SiparisController extends Controller
         $cartItems = \Cart::session($session_array)->getContent();
 
         $siparislerim = SepetModel::where('kullanici_id',auth()->user()->id)->get();
-        return view('Frontend.Daire.siparislerim',compact('siparislerim','cartItems'));
+        return view('Frontend.Kullanici.siparislerim',compact('siparislerim','cartItems'));
     }
 
     // Sipariş Detay
@@ -30,7 +30,7 @@ class SiparisController extends Controller
         {
             $sepet = SepetModel::where('sepet_id',$id)->firstOrFail();
             $aldiklarim = SepetUrunModel::where('sepet_id',$id)->get();
-            return view('Frontend.Daire.siparis-detay',compact('sepet','aldiklarim','cartItems'));
+            return view('Frontend.Kullanici.siparis-detay',compact('sepet','aldiklarim','cartItems'));
         }
         else 
         {
